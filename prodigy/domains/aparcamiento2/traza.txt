@@ -1,0 +1,494 @@
+  i i i i i i i       ooooo    o        ooooooo   ooooo   ooooo   
+  I I I I I I I      8     8   8           8     8     o  8    8  
+  I I I I I I I      8         8           8     8        8    8  
+  I I I I I I I      8         8           8      ooooo   8oooo   
+  I  \ `+' /  I      8         8           8           8  8       
+   \  `-+-'  /       8     o   8           8     o     8  8       
+    `-__|__-'         ooooo    8oooooo  ooo8ooo   ooooo   8       
+        |                                                         
+  ------+------     Copyright (c) Bruno Haible, Michael Stoll 1992, 1993
+                    Copyright (c) Bruno Haible, Marcus Daniels 1994-1997
+                                                                  
+;; Loading file .\domains\aparcamiento2\comandos.txt ...
+;; Loading file .\domains\aparcamiento2\domain.lisp ...
+;; Loading of file .\domains\aparcamiento2\domain.lisp is finished.Running load-domain.
+;; Loading file .\domains\aparcamiento2\probs\problema1.lisp ...
+;; Loading of file .\domains\aparcamiento2\probs\problema1.lisp is finished.Creating objects (C1 C2) of type COCHE
+Creating objects (PLZ1 PLZ2 PLZ3 PLZ4) of type PLAZA
+Creating objects (PLNT-0 PLNT-1 PLNT-2) of type PLANTA
+Creating object ASC of type ASCENSOR
+
+  2 n2 (done)
+  4 n4 <*finish*>
+  5   n5 (cocheen c1 plnt-0) [1]
+  6   n6 mover-coche-ascensor ...no choices for bindings
+  6   n7 mover-coche-plaza ...no choices for bindings
+  7   n9 <mover-coche-planta asc c1 plnt-0>
+  8     n10 (cocheen c1 asc) [1]
+ 10     n12 <mover-coche-ascensor asc c1 plnt-0> [12] ...goal loop with node 5
+ 10     n13 <mover-coche-ascensor asc c1 plnt-0> [11]
+ 11   n14 (cocheen c2 plnt-0)
+ 12   n15 mover-coche-ascensor ...no choices for bindings
+ 12   n16 mover-coche-plaza ...no choices for bindings
+ 13   n18 <mover-coche-planta asc c2 plnt-0>
+ 14     n19 (cocheen c2 asc)
+ 16     n21 <mover-coche-ascensor asc c2 plnt-0> [12] ...goal loop with node 14
+ 16     n22 <mover-coche-ascensor asc c2 plnt-0> [11]
+ 17       n23 (cocheen c2 plz4)
+ 18       n24 mover-coche-ascensor ...no choices for bindings
+ 19       n26 <mover-coche-plaza asc c2 plnt-2 plz4> ...goal loop with node 19
+ 18       n27 mover-coche-planta ...no choices for bindings
+
+ 15     n20 mover-coche-ascensor
+ 16     n28 <mover-coche-ascensor asc c2 plnt-0> [11] ...goal loop with node 14
+ 16     n29 <mover-coche-ascensor asc c2 plnt-0> [10]
+ 17       n30 (cocheen c2 plz3)
+ 18       n31 mover-coche-ascensor ...no choices for bindings
+ 19       n33 <mover-coche-plaza asc c2 plnt-2 plz3> ...goal loop with node 19
+ 18       n34 mover-coche-planta ...no choices for bindings
+
+ 15     n20 mover-coche-ascensor
+ 16     n35 <mover-coche-ascensor asc c2 plnt-0> [10] ...goal loop with node 14
+ 16     n36 <mover-coche-ascensor asc c2 plnt-0> [9] ...no pending goals.
+ 16     n37 <mover-coche-ascensor asc c2 plnt-0> [9] ...goal loop with node 14
+ 16     n38 <mover-coche-ascensor asc c2 plnt-0> [8]
+ 17       n39 (cocheen c2 plz1)
+ 18       n40 mover-coche-ascensor ...no choices for bindings
+ 19       n42 <mover-coche-plaza asc c2 plnt-1 plz1> ...goal loop with node 19
+ 18       n43 mover-coche-planta ...no choices for bindings
+
+ 15     n20 mover-coche-ascensor
+ 16     n44 <mover-coche-ascensor asc c2 plnt-1> [8]
+ 17       n45 (ascensoren asc plnt-1) [1]
+ 19       n47 <mover-ascensor asc plnt-0 plnt-1> [1]
+ 20       n48 <MOVER-ASCENSOR ASC PLNT-0 PLNT-1> [1]
+ 21     n49 <MOVER-COCHE-ASCENSOR ASC C2 PLNT-1> [2]
+ 22     n50 (ascensoren asc plnt-0)
+ 24     n52 <mover-ascensor asc plnt-1 plnt-0>
+ 25     n53 <MOVER-ASCENSOR ASC PLNT-1 PLNT-0>
+ 26   n54 <MOVER-COCHE-PLANTA ASC C2 PLNT-0> ...no pending goals.
+
+ 20       n48 <MOVER-ASCENSOR ASC PLNT-0 PLNT-1> [1]
+ 21       n55 (cocheen c2 plnt-1) [1]
+ 22       n56 mover-coche-ascensor ...no choices for bindings
+ 22       n57 mover-coche-plaza ...no choices for bindings
+ 23       n59 <mover-coche-planta asc c2 plnt-1> ...goal loop with node 19
+
+ 19       n47 <mover-ascensor asc plnt-0 plnt-1> [1]
+ 20       n60 (cocheen c2 plnt-1)
+ 21       n61 mover-coche-ascensor ...no choices for bindings
+ 21       n62 mover-coche-plaza ...no choices for bindings
+ 22       n64 <mover-coche-planta asc c2 plnt-1> ...goal loop with node 19
+
+ 15     n20 mover-coche-ascensor
+ 16     n65 <mover-coche-ascensor asc c2 plnt-1> [7]
+ 17       n66 (ascensoren asc plnt-1)
+ 19       n68 <mover-ascensor asc plnt-0 plnt-1> [1]
+ 20       n69 <MOVER-ASCENSOR ASC PLNT-0 PLNT-1>
+ 21     n70 <MOVER-COCHE-ASCENSOR ASC C2 PLNT-1> [1]
+ 22     n71 (ascensoren asc plnt-0)
+ 24     n73 <mover-ascensor asc plnt-1 plnt-0>
+ 25     n74 <MOVER-ASCENSOR ASC PLNT-1 PLNT-0>
+ 26   n75 <MOVER-COCHE-PLANTA ASC C2 PLNT-0> ...no pending goals.
+
+ 20       n69 <MOVER-ASCENSOR ASC PLNT-0 PLNT-1>
+ 21     n76 (ascensoren asc plnt-0)
+ 23     n78 <mover-ascensor asc plnt-1 plnt-0> ...applying leads to state loop.
+
+ 18       n67 mover-ascensor
+ 19       n80 <mover-ascensor asc plnt-2 plnt-1>
+ 20         n81 (ascensoren asc plnt-2)
+ 22         n83 <mover-ascensor asc plnt-1 plnt-2> ...goal loop with node 66
+
+ 15     n20 mover-coche-ascensor
+ 16     n84 <mover-coche-ascensor asc c2 plnt-1> [7]
+ 17       n85 (ascensoren asc plnt-1) [1]
+ 19       n87 <mover-ascensor asc plnt-0 plnt-1> [1]
+ 20       n88 <MOVER-ASCENSOR ASC PLNT-0 PLNT-1> [1]
+ 21       n89 (cocheen c2 plnt-1) [1]
+ 22       n90 mover-coche-ascensor ...no choices for bindings
+ 22       n91 mover-coche-plaza ...no choices for bindings
+ 23       n93 <mover-coche-planta asc c2 plnt-1> ...goal loop with node 19
+
+ 19       n87 <mover-ascensor asc plnt-0 plnt-1> [1]
+ 20       n94 (cocheen c2 plnt-1)
+ 21       n95 mover-coche-ascensor ...no choices for bindings
+ 21       n96 mover-coche-plaza ...no choices for bindings
+ 22       n98 <mover-coche-planta asc c2 plnt-1> ...goal loop with node 19
+
+ 15     n20 mover-coche-ascensor
+ 16     n99 <mover-coche-ascensor asc c2 plnt-1> [6]
+ 17       n100 (ascensoren asc plnt-1) [1]
+ 19       n102 <mover-ascensor asc plnt-0 plnt-1> [1]
+ 20       n103 <MOVER-ASCENSOR ASC PLNT-0 PLNT-1> [1]
+ 21       n104 (cocheen c2 plz4) [1]
+ 22       n105 mover-coche-ascensor ...no choices for bindings
+ 23       n107 <mover-coche-plaza asc c2 plnt-2 plz4> ...goal loop with node 19
+ 22       n108 mover-coche-planta ...no choices for bindings
+
+ 19       n102 <mover-ascensor asc plnt-0 plnt-1> [1]
+ 20       n109 (cocheen c2 plz4)
+ 21       n110 mover-coche-ascensor ...no choices for bindings
+ 22       n112 <mover-coche-plaza asc c2 plnt-2 plz4> ...goal loop with node 19
+ 21       n113 mover-coche-planta ...no choices for bindings
+
+ 15     n20 mover-coche-ascensor
+ 16     n114 <mover-coche-ascensor asc c2 plnt-1> [6]
+ 17       n115 (ascensoren asc plnt-1) [1]
+ 19       n117 <mover-ascensor asc plnt-0 plnt-1> [1]
+ 20       n118 <MOVER-ASCENSOR ASC PLNT-0 PLNT-1> [1]
+ 21       n119 (cocheen c2 plnt-1) [1]
+ 22       n120 mover-coche-ascensor ...no choices for bindings
+ 22       n121 mover-coche-plaza ...no choices for bindings
+ 23       n123 <mover-coche-planta asc c2 plnt-1> ...goal loop with node 19
+
+ 19       n117 <mover-ascensor asc plnt-0 plnt-1> [1]
+ 20       n124 (cocheen c2 plnt-1)
+ 21       n125 mover-coche-ascensor ...no choices for bindings
+ 21       n126 mover-coche-plaza ...no choices for bindings
+ 22       n128 <mover-coche-planta asc c2 plnt-1> ...goal loop with node 19
+
+ 15     n20 mover-coche-ascensor
+ 16     n129 <mover-coche-ascensor asc c2 plnt-1> [5]
+ 17       n130 (ascensoren asc plnt-1) [1]
+ 19       n132 <mover-ascensor asc plnt-0 plnt-1> [1]
+ 20       n133 <MOVER-ASCENSOR ASC PLNT-0 PLNT-1> [1]
+ 21       n134 (cocheen c2 plz3) [1]
+ 22       n135 mover-coche-ascensor ...no choices for bindings
+ 23       n137 <mover-coche-plaza asc c2 plnt-2 plz3> ...goal loop with node 19
+ 22       n138 mover-coche-planta ...no choices for bindings
+
+ 19       n132 <mover-ascensor asc plnt-0 plnt-1> [1]
+ 20       n139 (cocheen c2 plz3)
+ 21       n140 mover-coche-ascensor ...no choices for bindings
+ 22       n142 <mover-coche-plaza asc c2 plnt-2 plz3> ...goal loop with node 19
+ 21       n143 mover-coche-planta ...no choices for bindings
+
+ 15     n20 mover-coche-ascensor
+ 16     n144 <mover-coche-ascensor asc c2 plnt-1> [5]
+ 17       n145 (ascensoren asc plnt-1) [1]
+ 19       n147 <mover-ascensor asc plnt-0 plnt-1> [1]
+ 20       n148 <MOVER-ASCENSOR ASC PLNT-0 PLNT-1> [1]
+ 21       n149 (cocheen c2 plnt-1) [1]
+ 22       n150 mover-coche-ascensor ...no choices for bindings
+ 22       n151 mover-coche-plaza ...no choices for bindings
+ 23       n153 <mover-coche-planta asc c2 plnt-1> ...goal loop with node 19
+
+ 19       n147 <mover-ascensor asc plnt-0 plnt-1> [1]
+ 20       n154 (cocheen c2 plnt-1)
+ 21       n155 mover-coche-ascensor ...no choices for bindings
+ 21       n156 mover-coche-plaza ...no choices for bindings
+ 22       n158 <mover-coche-planta asc c2 plnt-1> ...goal loop with node 19
+
+ 15     n20 mover-coche-ascensor
+ 16     n159 <mover-coche-ascensor asc c2 plnt-1> [4]
+ 17       n160 (ascensoren asc plnt-1) [1]
+ 19       n162 <mover-ascensor asc plnt-0 plnt-1> [1]
+ 20       n163 <MOVER-ASCENSOR ASC PLNT-0 PLNT-1> [1]
+ 21       n164 (cocheen c2 plz1) [1]
+ 22       n165 mover-coche-ascensor ...no choices for bindings
+ 23       n167 <mover-coche-plaza asc c2 plnt-1 plz1> ...goal loop with node 19
+ 22       n168 mover-coche-planta ...no choices for bindings
+
+ 19       n162 <mover-ascensor asc plnt-0 plnt-1> [1]
+ 20       n169 (cocheen c2 plz1)
+ 21       n170 mover-coche-ascensor ...no choices for bindings
+ 22       n172 <mover-coche-plaza asc c2 plnt-1 plz1> ...goal loop with node 19
+ 21       n173 mover-coche-planta ...no choices for bindings
+
+ 15     n20 mover-coche-ascensor
+ 16     n174 <mover-coche-ascensor asc c2 plnt-2> [4]
+ 17       n175 (ascensoren asc plnt-2) [1]
+ 19       n177 <mover-ascensor asc plnt-1 plnt-2>
+ 20         n178 (ascensoren asc plnt-1) [1]
+ 22         n180 <mover-ascensor asc plnt-0 plnt-1> [1]
+ 23         n181 <MOVER-ASCENSOR ASC PLNT-0 PLNT-1> [1]
+ 24       n182 <MOVER-ASCENSOR ASC PLNT-1 PLNT-2> [2]
+ 25       n183 (cocheen c2 plnt-2) [1]
+ 26       n184 mover-coche-ascensor ...no choices for bindings
+ 26       n185 mover-coche-plaza ...no choices for bindings
+ 27       n187 <mover-coche-planta asc c2 plnt-2> ...goal loop with node 19
+
+ 23         n181 <MOVER-ASCENSOR ASC PLNT-0 PLNT-1> [1]
+ 24       n188 (cocheen c2 plnt-2) [1]
+ 25       n189 mover-coche-ascensor ...no choices for bindings
+ 25       n190 mover-coche-plaza ...no choices for bindings
+ 26       n192 <mover-coche-planta asc c2 plnt-2> ...goal loop with node 19
+
+ 22         n180 <mover-ascensor asc plnt-0 plnt-1> [1]
+ 23       n193 (cocheen c2 plnt-2)
+ 24       n194 mover-coche-ascensor ...no choices for bindings
+ 24       n195 mover-coche-plaza ...no choices for bindings
+ 25       n197 <mover-coche-planta asc c2 plnt-2> ...goal loop with node 19
+
+ 15     n20 mover-coche-ascensor
+ 16     n198 <mover-coche-ascensor asc c2 plnt-2> [3]
+ 17       n199 (ascensoren asc plnt-2) [1]
+ 19       n201 <mover-ascensor asc plnt-1 plnt-2>
+ 20         n202 (ascensoren asc plnt-1) [1]
+ 22         n204 <mover-ascensor asc plnt-0 plnt-1> [1]
+ 23         n205 <MOVER-ASCENSOR ASC PLNT-0 PLNT-1> [1]
+ 24       n206 <MOVER-ASCENSOR ASC PLNT-1 PLNT-2> [2]
+ 25       n207 (cocheen c2 plz4) [1]
+ 26       n208 mover-coche-ascensor ...no choices for bindings
+ 27       n210 <mover-coche-plaza asc c2 plnt-2 plz4> ...goal loop with node 19
+ 26       n211 mover-coche-planta ...no choices for bindings
+
+ 23         n205 <MOVER-ASCENSOR ASC PLNT-0 PLNT-1> [1]
+ 24       n212 (cocheen c2 plz4) [1]
+ 25       n213 mover-coche-ascensor ...no choices for bindings
+ 26       n215 <mover-coche-plaza asc c2 plnt-2 plz4> ...goal loop with node 19
+ 25       n216 mover-coche-planta ...no choices for bindings
+
+ 22         n204 <mover-ascensor asc plnt-0 plnt-1> [1]
+ 23       n217 (cocheen c2 plz4)
+ 24       n218 mover-coche-ascensor ...no choices for bindings
+ 25       n220 <mover-coche-plaza asc c2 plnt-2 plz4> ...goal loop with node 19
+ 24       n221 mover-coche-planta ...no choices for bindings
+
+ 15     n20 mover-coche-ascensor
+ 16     n222 <mover-coche-ascensor asc c2 plnt-2> [3]
+ 17       n223 (ascensoren asc plnt-2) [1]
+ 19       n225 <mover-ascensor asc plnt-1 plnt-2>
+ 20         n226 (ascensoren asc plnt-1) [1]
+ 22         n228 <mover-ascensor asc plnt-0 plnt-1> [1]
+ 23         n229 <MOVER-ASCENSOR ASC PLNT-0 PLNT-1> [1]
+ 24       n230 <MOVER-ASCENSOR ASC PLNT-1 PLNT-2> [2]
+ 25       n231 (cocheen c2 plnt-2) [1]
+ 26       n232 mover-coche-ascensor ...no choices for bindings
+ 26       n233 mover-coche-plaza ...no choices for bindings
+ 27       n235 <mover-coche-planta asc c2 plnt-2> ...goal loop with node 19
+
+ 23         n229 <MOVER-ASCENSOR ASC PLNT-0 PLNT-1> [1]
+ 24       n236 (cocheen c2 plnt-2) [1]
+ 25       n237 mover-coche-ascensor ...no choices for bindings
+ 25       n238 mover-coche-plaza ...no choices for bindings
+ 26       n240 <mover-coche-planta asc c2 plnt-2> ...goal loop with node 19
+
+ 22         n228 <mover-ascensor asc plnt-0 plnt-1> [1]
+ 23       n241 (cocheen c2 plnt-2)
+ 24       n242 mover-coche-ascensor ...no choices for bindings
+ 24       n243 mover-coche-plaza ...no choices for bindings
+ 25       n245 <mover-coche-planta asc c2 plnt-2> ...goal loop with node 19
+
+ 15     n20 mover-coche-ascensor
+ 16     n246 <mover-coche-ascensor asc c2 plnt-2> [2]
+ 17       n247 (ascensoren asc plnt-2) [1]
+ 19       n249 <mover-ascensor asc plnt-1 plnt-2>
+ 20         n250 (ascensoren asc plnt-1) [1]
+ 22         n252 <mover-ascensor asc plnt-0 plnt-1> [1]
+ 23         n253 <MOVER-ASCENSOR ASC PLNT-0 PLNT-1> [1]
+ 24       n254 <MOVER-ASCENSOR ASC PLNT-1 PLNT-2> [2]
+ 25       n255 (cocheen c2 plz3) [1]
+ 26       n256 mover-coche-ascensor ...no choices for bindings
+ 27       n258 <mover-coche-plaza asc c2 plnt-2 plz3> ...goal loop with node 19
+ 26       n259 mover-coche-planta ...no choices for bindings
+
+ 23         n253 <MOVER-ASCENSOR ASC PLNT-0 PLNT-1> [1]
+ 24       n260 (cocheen c2 plz3) [1]
+ 25       n261 mover-coche-ascensor ...no choices for bindings
+ 26       n263 <mover-coche-plaza asc c2 plnt-2 plz3> ...goal loop with node 19
+ 25       n264 mover-coche-planta ...no choices for bindings
+
+ 22         n252 <mover-ascensor asc plnt-0 plnt-1> [1]
+ 23       n265 (cocheen c2 plz3)
+ 24       n266 mover-coche-ascensor ...no choices for bindings
+ 25       n268 <mover-coche-plaza asc c2 plnt-2 plz3> ...goal loop with node 19
+ 24       n269 mover-coche-planta ...no choices for bindings
+
+ 15     n20 mover-coche-ascensor
+ 16     n270 <mover-coche-ascensor asc c2 plnt-2> [2]
+ 17       n271 (ascensoren asc plnt-2) [1]
+ 19       n273 <mover-ascensor asc plnt-1 plnt-2>
+ 20         n274 (ascensoren asc plnt-1) [1]
+ 22         n276 <mover-ascensor asc plnt-0 plnt-1> [1]
+ 23         n277 <MOVER-ASCENSOR ASC PLNT-0 PLNT-1> [1]
+ 24       n278 <MOVER-ASCENSOR ASC PLNT-1 PLNT-2> [2]
+ 25       n279 (cocheen c2 plnt-2) [1]
+ 26       n280 mover-coche-ascensor ...no choices for bindings
+ 26       n281 mover-coche-plaza ...no choices for bindings
+ 27       n283 <mover-coche-planta asc c2 plnt-2> ...goal loop with node 19
+
+ 23         n277 <MOVER-ASCENSOR ASC PLNT-0 PLNT-1> [1]
+ 24       n284 (cocheen c2 plnt-2) [1]
+ 25       n285 mover-coche-ascensor ...no choices for bindings
+ 25       n286 mover-coche-plaza ...no choices for bindings
+ 26       n288 <mover-coche-planta asc c2 plnt-2> ...goal loop with node 19
+
+ 22         n276 <mover-ascensor asc plnt-0 plnt-1> [1]
+ 23       n289 (cocheen c2 plnt-2)
+ 24       n290 mover-coche-ascensor ...no choices for bindings
+ 24       n291 mover-coche-plaza ...no choices for bindings
+ 25       n293 <mover-coche-planta asc c2 plnt-2> ...goal loop with node 19
+
+ 15     n20 mover-coche-ascensor
+ 16     n294 <mover-coche-ascensor asc c2 plnt-2> [1]
+ 17       n295 (ascensoren asc plnt-2)
+ 19       n297 <mover-ascensor asc plnt-1 plnt-2>
+ 20         n298 (ascensoren asc plnt-1)
+ 22         n300 <mover-ascensor asc plnt-0 plnt-1> [1]
+ 23         n301 <MOVER-ASCENSOR ASC PLNT-0 PLNT-1>
+ 24       n302 <MOVER-ASCENSOR ASC PLNT-1 PLNT-2> [1]
+ 25     n303 (ascensoren asc plnt-0)
+ 27     n305 <mover-ascensor asc plnt-1 plnt-0>
+ 28       n306 (ascensoren asc plnt-1)
+ 30       n308 <mover-ascensor asc plnt-2 plnt-1> [1] ...applying leads to state loop.
+ 30       n310 <mover-ascensor asc plnt-0 plnt-1> ...goal loop with node 303
+
+ 23         n301 <MOVER-ASCENSOR ASC PLNT-0 PLNT-1>
+ 24     n311 (ascensoren asc plnt-0)
+ 26     n313 <mover-ascensor asc plnt-1 plnt-0> ...applying leads to state loop.
+
+ 21         n299 mover-ascensor
+ 22         n315 <mover-ascensor asc plnt-2 plnt-1> ...goal loop with node 295
+
+ 15     n20 mover-coche-ascensor
+ 16     n316 <mover-coche-ascensor asc c2 plnt-2> [1]
+ 17       n317 (ascensoren asc plnt-2) [1]
+ 19       n319 <mover-ascensor asc plnt-1 plnt-2>
+ 20         n320 (ascensoren asc plnt-1) [1]
+ 22         n322 <mover-ascensor asc plnt-0 plnt-1> [1]
+ 23         n323 <MOVER-ASCENSOR ASC PLNT-0 PLNT-1> [1]
+ 24       n324 <MOVER-ASCENSOR ASC PLNT-1 PLNT-2> [2]
+ 25       n325 (cocheen c2 plnt-2) [1]
+ 26       n326 mover-coche-ascensor ...no choices for bindings
+ 26       n327 mover-coche-plaza ...no choices for bindings
+ 27       n329 <mover-coche-planta asc c2 plnt-2> ...goal loop with node 19
+
+ 23         n323 <MOVER-ASCENSOR ASC PLNT-0 PLNT-1> [1]
+ 24       n330 (cocheen c2 plnt-2) [1]
+ 25       n331 mover-coche-ascensor ...no choices for bindings
+ 25       n332 mover-coche-plaza ...no choices for bindings
+ 26       n334 <mover-coche-planta asc c2 plnt-2> ...goal loop with node 19
+
+ 22         n322 <mover-ascensor asc plnt-0 plnt-1> [1]
+ 23       n335 (cocheen c2 plnt-2)
+ 24       n336 mover-coche-ascensor ...no choices for bindings
+ 24       n337 mover-coche-plaza ...no choices for bindings
+ 25       n339 <mover-coche-planta asc c2 plnt-2> ...goal loop with node 19
+
+ 15     n20 mover-coche-ascensor
+ 16     n340 <mover-coche-ascensor asc c2 plnt-2>
+ 17       n341 (ascensoren asc plnt-2) [1]
+ 19       n343 <mover-ascensor asc plnt-1 plnt-2>
+ 20         n344 (ascensoren asc plnt-1) [1]
+ 22         n346 <mover-ascensor asc plnt-0 plnt-1> [1]
+ 23         n347 <MOVER-ASCENSOR ASC PLNT-0 PLNT-1> [1]
+ 24       n348 <MOVER-ASCENSOR ASC PLNT-1 PLNT-2> [2]
+ 25       n349 (cocheen c2 plz1) [1]
+ 26       n350 mover-coche-ascensor ...no choices for bindings
+ 27       n352 <mover-coche-plaza asc c2 plnt-1 plz1> ...goal loop with node 19
+ 26       n353 mover-coche-planta ...no choices for bindings
+
+ 23         n347 <MOVER-ASCENSOR ASC PLNT-0 PLNT-1> [1]
+ 24       n354 (cocheen c2 plz1) [1]
+ 25       n355 mover-coche-ascensor ...no choices for bindings
+ 26       n357 <mover-coche-plaza asc c2 plnt-1 plz1> ...goal loop with node 19
+ 25       n358 mover-coche-planta ...no choices for bindings
+
+ 22         n346 <mover-ascensor asc plnt-0 plnt-1> [1]
+ 23       n359 (cocheen c2 plz1)
+ 24       n360 mover-coche-ascensor ...no choices for bindings
+ 25       n362 <mover-coche-plaza asc c2 plnt-1 plz1> ...goal loop with node 19
+ 24       n363 mover-coche-planta ...no choices for bindings
+
+ 14     n19 (cocheen c2 asc)
+ 15     n364 mover-coche-plaza ...no choices for bindings
+ 15     n365 mover-coche-planta ...no choices for bindings
+
+  9     n11 mover-coche-ascensor
+ 10     n366 <mover-coche-ascensor asc c1 plnt-0> [11] ...goal loop with node 5
+ 10     n367 <mover-coche-ascensor asc c1 plnt-0> [10]
+ 11       n368 (cocheen c1 plz3) [1]
+ 12       n369 mover-coche-ascensor ...no choices for bindings
+ 13       n371 <mover-coche-plaza asc c1 plnt-2 plz3> ...goal loop with node 10
+ 12       n372 mover-coche-planta ...no choices for bindings
+
+  9     n11 mover-coche-ascensor
+ 10     n373 <mover-coche-ascensor asc c1 plnt-0> [10] ...goal loop with node 5
+ 10     n374 <mover-coche-ascensor asc c1 plnt-0> [9]
+ 11       n375 (cocheen c1 plz2) [1]
+ 12       n376 mover-coche-ascensor ...no choices for bindings
+ 13       n378 <mover-coche-plaza asc c1 plnt-1 plz2> ...goal loop with node 10
+ 12       n379 mover-coche-planta ...no choices for bindings
+
+  9     n11 mover-coche-ascensor
+ 10     n380 <mover-coche-ascensor asc c1 plnt-0> [9] ...goal loop with node 5
+ 10     n381 <mover-coche-ascensor asc c1 plnt-0> [8]
+ 11       n382 (cocheen c1 plz1) [1]
+ 12       n383 mover-coche-ascensor ...no choices for bindings
+ 13       n385 <mover-coche-plaza asc c1 plnt-1 plz1> ...goal loop with node 10
+ 12       n386 mover-coche-planta ...no choices for bindings
+
+  9     n11 mover-coche-ascensor
+ 10     n387 <mover-coche-ascensor asc c1 plnt-2> [8]
+ 11       n388 (ascensoren asc plnt-2) [2]
+ 13       n390 <mover-ascensor asc plnt-1 plnt-2>
+ 14         n391 (ascensoren asc plnt-1) [2]
+ 16         n393 <mover-ascensor asc plnt-0 plnt-1> [1]
+ 17         n394 <MOVER-ASCENSOR ASC PLNT-0 PLNT-1> [2]
+ 18       n395 <MOVER-ASCENSOR ASC PLNT-1 PLNT-2> [3]
+ 19     n396 <MOVER-COCHE-ASCENSOR ASC C1 PLNT-2> [3]
+ 20     n397 (ascensoren asc plnt-0) [1]
+ 22     n399 <mover-ascensor asc plnt-1 plnt-0>
+ 23       n400 (ascensoren asc plnt-1) [1]
+ 25       n402 <mover-ascensor asc plnt-2 plnt-1> [1]
+ 26       n403 <MOVER-ASCENSOR ASC PLNT-2 PLNT-1> [1]
+ 27     n404 <MOVER-ASCENSOR ASC PLNT-1 PLNT-0> [1]
+ 28   n405 <MOVER-COCHE-PLANTA ASC C1 PLNT-0> [1]
+ 29   n406 (cocheen c2 plnt-0)
+ 30   n407 mover-coche-ascensor ...no choices for bindings
+ 30   n408 mover-coche-plaza ...no choices for bindings
+ 31   n410 <mover-coche-planta asc c2 plnt-0>
+ 32     n411 (cocheen c2 asc)
+ 34     n413 <mover-coche-ascensor asc c2 plnt-0> [12] ...goal loop with node 406
+ 34     n414 <mover-coche-ascensor asc c2 plnt-0> [11]
+ 35       n415 (cocheen c2 plz4)
+ 36       n416 mover-coche-ascensor ...no choices for bindings
+ 37       n418 <mover-coche-plaza asc c2 plnt-2 plz4> ...goal loop with node 411
+ 36       n419 mover-coche-planta ...no choices for bindings
+
+ 33     n412 mover-coche-ascensor
+ 34     n420 <mover-coche-ascensor asc c2 plnt-0> [11] ...goal loop with node 406
+ 34     n421 <mover-coche-ascensor asc c2 plnt-0> [10]
+ 35       n422 (cocheen c2 plz3)
+ 36       n423 mover-coche-ascensor ...no choices for bindings
+ 37       n425 <mover-coche-plaza asc c2 plnt-2 plz3> ...goal loop with node 411
+ 36       n426 mover-coche-planta ...no choices for bindings
+
+ 33     n412 mover-coche-ascensor
+ 34     n427 <mover-coche-ascensor asc c2 plnt-0> [10] ...goal loop with node 406
+ 34     n428 <mover-coche-ascensor asc c2 plnt-0> [9] ...no pending goals.
+ 34     n429 <mover-coche-ascensor asc c2 plnt-0> [9] ...goal loop with node 406
+ 34     n430 <mover-coche-ascensor asc c2 plnt-0> [8]
+ 35       n431 (cocheen c2 plz1)
+ 36       n432 mover-coche-ascensor ...no choices for bindings
+ 37       n434 <mover-coche-plaza asc c2 plnt-1 plz1> ...goal loop with node 411
+ 36       n435 mover-coche-planta ...no choices for bindings
+
+ 33     n412 mover-coche-ascensor
+ 34     n436 <mover-coche-ascensor asc c2 plnt-1> [8]
+ 35       n437 (ascensoren asc plnt-1) [1]
+ 37       n439 <mover-ascensor asc plnt-0 plnt-1> [1]
+ 38       n440 <MOVER-ASCENSOR ASC PLNT-0 PLNT-1> [1]
+ 39     n441 <MOVER-COCHE-ASCENSOR ASC C2 PLNT-1> [2]
+ 40     n442 (ascensoren asc plnt-0)
+ 42     n444 <mover-ascensor asc plnt-1 plnt-0>
+ 43     n445 <MOVER-ASCENSOR ASC PLNT-1 PLNT-0>
+ 43   n446 <MOVER-COCHE-PLANTA ASC C2 PLNT-0>
+Achieved top-level goals.
+
+Solution:
+	<mover-ascensor asc plnt-0 plnt-1>
+	<mover-ascensor asc plnt-1 plnt-2>
+	<mover-coche-ascensor asc c1 plnt-2>
+	<mover-ascensor asc plnt-2 plnt-1>
+	<mover-ascensor asc plnt-1 plnt-0>
+	<mover-coche-planta asc c1 plnt-0>
+	<mover-ascensor asc plnt-0 plnt-1>
+	<mover-coche-ascensor asc c2 plnt-1>
+	<mover-ascensor asc plnt-1 plnt-0>
+	<mover-coche-planta asc c2 plnt-0>
+
+;; Loading of file .\domains\aparcamiento2\comandos.txt is finished.
+> 

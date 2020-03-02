@@ -1,0 +1,4 @@
+(setf *world-path* "./domains/" )
+(domain 'aparcamiento2 :compile :t)
+(problem 'problema1)
+(run :depth-bound 100)

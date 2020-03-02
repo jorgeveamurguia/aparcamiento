@@ -1,0 +1,65 @@
+
+
+Objetivo de la práctica es resolver un problema, y plantear otro con similares caracteristicas, con dos planificadores distintos
+
+La para solucionar el problema del aparcador automático pasamos a definir cada uno de los elementos de la practica. 
+
+Primero resolveremos el problema planteado de la practica con el prodigy
+
+
+Las constantes del dominio son: 
+para las plaza: {Plz1, Plz2, Plz3, Plz4}
+para los 2 coches {c1, c2}
+para las plantas {Pln-0,Plnt-1,Plnt-2}
+para el ascensor {asc}
+
+La topologia del dominio se representa usando los siguientes predicados instanciados:
+
+Predicados estaticos
+Plaza-en se define una plaza su posicion en la planta del aparcamiento
+				(Plaza-en Plz1 Plnt-1)
+				(Plaza-en Plz2 Plnt-1)
+				(Plaza-en Plz3 Plnt-2)
+				(Plaza-en Plz4 Plnt-2)
+Adyacente 
+Se define una planta que esta pegada o se comunica con la otra
+Se ha definido tanto la relacion de arriba a abajo y viceversa. 
+
+				(Adyacente Plnt-0 Plnt-1)
+				(Adyacente Plnt-1 Plnt-0)
+				(Adyacente Plnt-2 Plnt-1)
+				(Adyacente Plnt-1 Plnt-2)
+Los predicados dinámicos son
+Ascensor en la planta de salida
+				;dinamic
+				(AscensorEn asc Plnt-0)
+y los coches en la planta/plaza donde estan situados
+
+				(CocheEn c1 Plnt-0)
+				(CocheEn c2 Plnt-0)
+
+Las operaciones o acciones que pueden llevarse a cabo en el planificador son las siguientes
+
+MOVER-ASCENSOR
+Desplaza en ascensor entre las plantas para ello preguntará si una planta es adyacente a otra
+
+
+MOVER-COCHE-ASCENSOR
+Mueve el coche desde la planta de salida al ascensor.
+
+
+MOVER-COCHE-PLAZA
+mueve el coche desde el ascensor a la plaza de destino.
+
+
+El problema se instancia con los estados dinamicos 
+el ascensor en la planta-0
+el coche1 en la planta-0 
+el coche2 en la planta-0
+
+El estado final del coche es en 
+el coche1 en la plaza4 y el coche2 en la plaza2
+
+
+
+Siguiendo las recomendaciones de la practica 
